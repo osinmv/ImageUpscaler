@@ -1,4 +1,4 @@
-from torchvision.io import read_image
+from torchvision.io import read_image, ImageReadMode
 from torch.utils.data import Dataset, DataLoader
 import os
 import torch
@@ -15,8 +15,11 @@ class UpscalerDataset(Dataset):
         return len(self.imagenames)
 
     def __getitem__(self, idx):
-        x = read_image(os.path.join(os.path.join(
-            self.basepath, "Downscale"), self.imagenames[idx])).to(self.device)
-        y = read_image(os.path.join(os.path.join(
-            self.basepath, "Upscale"), self.imagenames[idx])).to(self.device)
+        x = read_image(
+            os.path.join(self.basepath, "Downscale", self.imagenames[idx]),
+            ImageReadMode.GRAY
+        ).to(self.device)
+        y = read_image(
+            os.path.join(self.basepath, "Upscale", self.imagenames[idx]),
+            ImageReadMode.GRAY).to(self.device)
         return x/255, y/255
