@@ -1,0 +1,7 @@
+/__pycache__
+/Data
+/TestData
+*.png
+*.jpeg
+weight*
+.DS_Store
