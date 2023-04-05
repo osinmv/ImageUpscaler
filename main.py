@@ -12,8 +12,8 @@ model = torch.nn.Sequential(
 
 model.to(mps_device)
 data = UpscalerDataset("Data", mps_device)
-optimizer = torch.optim.AdamW(model.parameters(), lr=0.001)
-loss_fn = torch.nn.MSELoss().to(mps_device)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+loss_fn = torch.nn.BCELoss().to(mps_device)
 dataset = torch.utils.data.DataLoader(data, batch_size=16)
 for ep in range(0, 10):
     for i, data in enumerate(dataset):
