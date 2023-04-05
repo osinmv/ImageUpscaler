@@ -1,10 +1,7 @@
 # My attempt in Upscaling with neural networks
-SRCNN - stole the model
-Shrinked it in size and made it grayscale, since I didn't have enough GPU memory.
+I took the SRCNN model and reduced its size while also converting it to grayscale due to limited GPU memory. However, I have noticed that using Mean Squared Error (MSE) as the loss function has negatively affected the model's performance, resulting in excessive blur. I should try experimenting with other types of losses. I trained the model for 10 epochs.
 
-The fact that I used MSE for Loss is having a negative impact on the model too.
-MSE brings a lot of blur. Should experiment with other losses.
-Trained for 10 epocs.
+Update: I discovered that someone used BSELoss, which allowed me to extract edges and merge them with the scaled image for slightly better results. However, the resulting image is now very dark.
 
 Here is one example (downscaled, upscaled, original)
 
