@@ -8,3 +8,8 @@ Here is one example (downscaled, upscaled, original)
 ![Downscaled](Assets/downscaled.jpg)
 ![Upscaled](Assets/upscaled.jpg)
 ![Original](Assets/original.jpg)
+
+Important:
+Pixel diff score between stretched and original image (74.2129)
+Pixel diff score between cnn upscaled and original image (70.3604)
+(My upscaling performs worse than scaling)
