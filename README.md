@@ -11,6 +11,9 @@ Here is one example (downscaled, upscaled with nn, just scaled and original)
 ![Original](Assets/original.jpg)
 
 Important:
+
 Pixel diff score between stretched and original image (74.2129)
+
 Pixel diff score between cnn upscaled and original image (70.3604)
+
 (My upscaling performs worse than scaling)
