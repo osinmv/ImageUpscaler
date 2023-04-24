@@ -3,10 +3,11 @@ I took the SRCNN model and reduced its size while also converting it to grayscal
 
 Update: I discovered that someone used BSELoss, which allowed me to extract edges and merge them with the scaled image for slightly better results. However, the resulting image is now very dark.
 
-Here is one example (downscaled, upscaled, original)
+Here is one example (downscaled, upscaled with nn, just scaled and original)
 
 ![Downscaled](Assets/downscaled.jpg)
 ![Upscaled](Assets/upscaled.jpg)
+![Upscaled](Assets/scaled.jpg)
 ![Original](Assets/original.jpg)
 
 Important:
