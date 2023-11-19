@@ -10,5 +10,5 @@ image_tensor = (read_image(
 img = torch.reshape(image_tensor, (1, 1, 450, 600))
 edges = model.forward(img)
 img = Resize((1200,1600)).forward(img)
-result = img*(0.1/edges)
+result = img
 save_image(result, "image.jpeg", "jpeg")
