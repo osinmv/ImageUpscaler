@@ -1,5 +1,5 @@
 # My attempt in Upscaling with neural networks
-Tried to do simplest upscale by upscaling and image and then running convolutions on it.
+Tried to do simplest upscale by upscaling an image and then running convolutions on it.
 
 Here is one example (downscaled, upscaled with nn, just scaled and original)
 Pixel diff score between stretched and original image (74.2129)
